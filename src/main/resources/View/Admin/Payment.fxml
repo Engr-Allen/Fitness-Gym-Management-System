@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.allen.fgms.Controller.Admin.PaymentController">
+   <children>
+      <AnchorPane fx:id="leftAnchorPane" layoutX="61.0" layoutY="47.0" prefHeight="627.0" prefWidth="430.0" style="-fx-background-color: white;" stylesheets="@../../Style/AdminStyles.css" AnchorPane.leftAnchor="61.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label layoutX="184.0" layoutY="42.0" text="New Membership:">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <VBox layoutX="166.0" layoutY="99.0" prefHeight="482.0" prefWidth="181.0" stylesheets="@../../Style/AdminStyles.css">
+               <children>
+                  <TextField fx:id="newNameField" promptText="Type Full Name" style="-fx-border-color: #732bb5; -fx-background-color: white;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ComboBox fx:id="membershipComboBox" maxHeight="32.0" minHeight="32.0" prefHeight="32.0" prefWidth="181.0" promptText="New Membership" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="contactField" promptText="Type Contact No." style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="emailAddressField" promptText="Type Email Address" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ComboBox fx:id="paymentMethodComboBoxNew" minHeight="32.0" prefHeight="32.0" prefWidth="181.0" promptText="Payment Method" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="newReferenceField" promptText="Type Reference No." style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="newCashierField" promptText="Type Cashier Name" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="36.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmedButtonClicked" prefHeight="40.0" prefWidth="179.0" style="-fx-background-color: #732bb5;" text="Confirm" textFill="WHITE">
+                     <font>
+                        <Font name="Yu Gothic UI Semibold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <effect>
+                        <DropShadow spread="0.25">
+                           <color>
+                              <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIcon fill="#ebebeb" glyphName="CHECK" />
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="30.0" layoutY="105.0" prefHeight="292.0" prefWidth="121.0" spacing="42.0">
+               <children>
+                  <Label text="Full Name :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Membership :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Contact Number :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Email Address :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Payment :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Reference No :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Cashier Name :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="leftAnchorPane1" layoutX="519.0" layoutY="47.0" prefHeight="627.0" prefWidth="430.0" style="-fx-background-color: white;" stylesheets="@../../Style/AdminStyles.css" AnchorPane.leftAnchor="519.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Button fx:id="searchButton" layoutX="338.0" layoutY="92.0" mnemonicParsing="false" onAction="#onSearchMembershipClicked" style="-fx-background-color: #732bb5;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.25">
+                     <color>
+                        <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <FontAwesomeIcon fill="#ebebeb" glyphName="SEARCH" />
+               </graphic>
+            </Button>
+            <Label layoutX="156.0" layoutY="39.0" text="Renew Membership:">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <VBox layoutX="147.0" layoutY="92.0" prefHeight="517.0" prefWidth="181.0" stylesheets="@../../Style/AdminStyles.css" AnchorPane.rightAnchor="102.0">
+               <children>
+                  <TextField fx:id="searchMembershipID" editable="false" promptText="Type Membership ID" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="fullNameField" editable="false" promptText="Full Name" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="startDateField" editable="false" promptText="Start Date" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="endDateField" editable="false" promptText="End Date" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ComboBox fx:id="renewalPeriodComboBox" prefHeight="32.0" prefWidth="181.0" promptText="Renew Membership" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="paymentMethodComboBoxRenew" prefHeight="32.0" prefWidth="181.0" promptText="Payment Method" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="renewReferenceField" promptText="Reference No." style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="renewCashierField" promptText="Type Cashier Name" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSaveButtonClicked" prefHeight="40.0" prefWidth="181.0" style="-fx-background-color: #732bb5;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIcon fill="#ebebeb" glyphName="CHECK" />
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="39.0" layoutY="101.0" prefHeight="380.0" prefWidth="102.0" spacing="36.0">
+               <children>
+                  <Label text="Search :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Full Name :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Start Date :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="End Date :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Membership :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Payment :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Reference No :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Cashier Name :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <FontAwesomeIcon fill="#ebebeb" glyphName="CHECK" layoutX="10.0" layoutY="10.0" />
+   </children>
+</AnchorPane>

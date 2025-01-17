@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.allen.fgms.Controller.Admin.ReceiptController">
+   <children>
+      <VBox layoutX="69.0" layoutY="272.0" prefHeight="186.0" prefWidth="100.0" spacing="10.0" AnchorPane.topAnchor="272.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="131.0" text="Amount :">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="131.0" text="Paid : ">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="131.0" text="ID :">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="131.0" text="Name :">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="131.0" text="Start Date :">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="131.0" text="End Date :">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="172.0" layoutY="64.0" prefHeight="38.0" prefWidth="157.0" text="GYMAZING CORP" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="281.0" layoutY="272.0" prefHeight="186.0" prefWidth="168.0" spacing="10.0" AnchorPane.topAnchor="272.0">
+         <children>
+            <Label fx:id="amountLabel" prefHeight="20.0" prefWidth="131.0" text="1000">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="transactionTypeLabel" prefHeight="20.0" prefWidth="131.0" text="New Membership">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="membershipIDLabel" prefHeight="20.0" prefWidth="131.0" text="542999">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameLabel" prefHeight="20.0" prefWidth="131.0" text="Allen Vincent Naive">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="startDateLabel" prefHeight="20.0" prefWidth="131.0" text="2004 July 1">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="endDateLabel" prefHeight="20.0" prefWidth="131.0" text="2004 July 1">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="189.0" layoutY="128.0" prefHeight="20.0" prefWidth="124.0" text="1102 Matina Street" AnchorPane.topAnchor="128.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="108.0" prefHeight="20.0" prefWidth="168.0" text="Davao City, Davao del Sur" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cashierLabel" layoutX="385.0" layoutY="211.0" prefHeight="20.0" prefWidth="85.0" text="Naive, A." AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateTimeLabel" layoutX="57.0" layoutY="211.0" prefHeight="20.0" prefWidth="231.0" text="2025 January 1,  12:03 PM" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="referenceLabel" layoutX="119.0" layoutY="239.0" prefHeight="17.0" prefWidth="70.0" text="8962 6345" AnchorPane.topAnchor="210.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cashierLabel1" layoutX="57.0" layoutY="239.0" prefHeight="20.0" prefWidth="49.0" text="Ref No." AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="210.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="paymentMethodLabel" layoutX="307.0" layoutY="239.0" prefHeight="20.0" prefWidth="85.0" text="Gcash" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="210.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="307.0" layoutY="211.0" prefHeight="20.0" prefWidth="56.0" text="Cashier :" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="301.0" layoutY="239.0" prefHeight="20.0" prefWidth="70.0" text="Payment :" AnchorPane.rightAnchor="123.0" AnchorPane.topAnchor="210.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Line endX="310.5" layoutX="149.0" layoutY="283.0" startX="-100.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="250.0" />
+   </children>
+</AnchorPane>

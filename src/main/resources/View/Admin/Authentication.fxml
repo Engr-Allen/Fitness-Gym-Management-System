@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.allen.fgms.Controller.Admin.AuthenticationController">
+   <children>
+      <AnchorPane fx:id="leftAnchorPane" layoutX="31.0" layoutY="37.0" prefHeight="627.0" prefWidth="425.0" style="-fx-background-color: white;" stylesheets="@../../Style/AdminStyles.css" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="37.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label layoutX="134.0" layoutY="42.0" text="Verify Membership:">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <VBox layoutX="122.0" layoutY="121.0" prefHeight="416.0" prefWidth="181.0" spacing="40.0" stylesheets="@../../Style/AdminStyles.css" AnchorPane.topAnchor="121.0">
+               <children>
+                  <TextField fx:id="searchMembershipIDField" promptText="Type Membership ID" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="fullMembershipNameField" promptText="Name" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="startDateField" promptText="Start Date" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="endDateField" promptText="End Date" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="remainingDaysField" promptText="Remaining Days" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#onClearMembershipFieldClicked" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #732bb5;" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow spread="0.25">
+                           <color>
+                              <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="REMOVE" />
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="28.0" layoutY="130.0" prefHeight="292.0" prefWidth="121.0" spacing="56.0" AnchorPane.topAnchor="130.0">
+               <children>
+                  <Label text="Search :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Full Name :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Start Date :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="End Date :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Days Left :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="searchButton" layoutX="319.0" layoutY="121.0" mnemonicParsing="false" onAction="#onSearchMembershipButtonClicked" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #732bb5;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.25">
+                     <color>
+                        <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <FontAwesomeIcon fill="#ebebeb" glyphName="SEARCH" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="leftAnchorPane1" layoutX="475.0" layoutY="37.0" maxHeight="627.0" prefHeight="627.0" prefWidth="425.0" style="-fx-background-color: white;" stylesheets="@../../Style/AdminStyles.css" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="37.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label layoutX="176.0" layoutY="35.0" text="Verify Staff:">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <VBox layoutX="28.0" layoutY="130.0" minHeight="300.0" prefHeight="448.0" prefWidth="121.0" spacing="70.0" AnchorPane.topAnchor="130.0">
+               <children>
+                  <Label text="Search :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Full Name :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Position :">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Date Hired:">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="133.0" layoutY="122.0" prefHeight="416.0" prefWidth="181.0" spacing="55.0" stylesheets="@../../Style/AdminStyles.css">
+               <children>
+                  <TextField fx:id="searchStaffIDField" promptText="Staff ID" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="fullStaffNameField" prefWidth="181.0" promptText="Name" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="positionField" promptText="Position" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="dateHiredField" promptText="Date Hired" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="11.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="clearStaffButton" mnemonicParsing="false" onAction="#onClearStaffFieldClicked" prefHeight="35.0" prefWidth="181.0" style="-fx-background-color: #732bb5;" stylesheets="@../../Style/AdminStyles.css" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow spread="0.25">
+                           <color>
+                              <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="REMOVE" />
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Button id="searchStaffButton" fx:id="searchStaffButton" layoutX="327.0" layoutY="122.0" mnemonicParsing="false" onAction="#onSearchStaffButtonClicked" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #732bb5;" stylesheets="@../../Style/AdminStyles.css" text="Search" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.25">
+                     <color>
+                        <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <FontAwesomeIcon fill="#ebebeb" glyphName="SEARCH" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

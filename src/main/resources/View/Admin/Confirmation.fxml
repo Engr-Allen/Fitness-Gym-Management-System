@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="348.0" prefWidth="300.0" stylesheets="@../../Style/AdminStyles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.allen.fgms.Controller.Admin.ConfirmationController">
+   <children>
+      <TextField fx:id="usernameField" layoutX="97.0" layoutY="118.0" promptText="Username" style="-fx-background-color: white; -fx-border-color: #732bb5;" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="118.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" layoutX="97.0" layoutY="174.0" prefHeight="32.0" prefWidth="150.0" promptText="Password" style="-fx-border-color: #732bb5; -fx-background-color: white;">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="continueButton" layoutX="97.0" layoutY="253.0" mnemonicParsing="false" onAction="#onContinueButtonClicked" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #732bb5;" text="Continue" textFill="WHITE" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="53.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.25">
+               <color>
+                  <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+               </color>
+            </DropShadow>
+         </effect>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="SIGN_IN" size="20" tabSize="20" wrappingWidth="22.285714149475098" />
+         </graphic>
+      </Button>
+      <FontAwesomeIcon fill="#732bb5" glyphName="USER" layoutX="54.0" layoutY="141.0" size="20" text="" />
+      <FontAwesomeIcon fill="#732bb5" glyphName="LOCK" layoutX="55.0" layoutY="197.0" size="20" />
+      <Label layoutX="97.0" layoutY="59.0">
+         <font>
+            <Font name="Segoe UI Semibold Italic" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="116.0" layoutY="53.0" text="Verification">
+         <font>
+            <Font name="Segoe UI Semibold Italic" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

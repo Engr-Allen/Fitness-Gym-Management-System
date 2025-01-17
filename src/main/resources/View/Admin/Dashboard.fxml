@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.allen.fgms.Controller.Admin.DashboardController">
+    <children>
+      <AnchorPane fx:id="leftAnchorPane" layoutY="163.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: white;" stylesheets="@../../Style/AdminStyles.css" AnchorPane.leftAnchor="70.0">
+         <children>
+              <PieChart fx:id="membershipPieChart" labelsVisible="true" layoutX="3.0" layoutY="50.0" prefWidth="400.0" />
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="rightAnchorPane" layoutX="472.0" layoutY="163.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: white;" stylesheets="@../../Style/AdminStyles.css" AnchorPane.rightAnchor="70.0">
+         <children>
+            <BarChart fx:id="membershipBarChart" layoutX="14.0" layoutY="50.0" prefWidth="400.0" stylesheets="@../../Style/AdminStyles.css">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="earningsAnchorPane" layoutX="601.0" layoutY="36.0" prefHeight="107.0" prefWidth="244.0" style="-fx-background-color: white;" stylesheets="@../../Style/AdminStyles.css">
+         <effect>
+            <DropShadow offsetX="5.0" offsetY="5.0">
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label layoutX="28.0" layoutY="20.0" prefHeight="20.0" prefWidth="202.0" text="Total Earnings for this Month:">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label fx:id="totalEarningsLabel" alignment="CENTER" layoutX="76.0" layoutY="54.0" prefHeight="32.0" prefWidth="93.0" text="100000">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="monthAnchorPane" layoutX="150.0" layoutY="36.0" prefHeight="107.0" prefWidth="244.0" style="-fx-background-color: white;" stylesheets="@../../Style/AdminStyles.css">
+         <effect>
+            <DropShadow offsetX="5.0" offsetY="5.0">
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label layoutX="71.0" layoutY="26.0" prefHeight="20.0" prefWidth="102.0" text="Sort by Month:">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <ComboBox fx:id="monthComboBox" layoutX="60.0" layoutY="54.0" prefHeight="30.0" prefWidth="125.0" style="-fx-border-color: #732bb5; -fx-background-color: white;" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="loginBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.allen.fgms.Controller.LoginController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER" />
+    </left>
+    <right>
+        <AnchorPane prefHeight="200.0" prefWidth="300.0" stylesheets="@../Style/AdminStyles.css" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="usernameField" layoutX="75.0" layoutY="127.0" promptText="Username" style="-fx-background-color: white; -fx-border-color: #732bb5;" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="127.0">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font></TextField>
+                <PasswordField fx:id="passwordField" layoutX="76.0" layoutY="188.0" prefHeight="32.0" prefWidth="150.0" promptText="Password" style="-fx-border-color: #732bb5; -fx-background-color: white;">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font></PasswordField>
+                <Button fx:id="loginButton" layoutX="75.0" layoutY="253.0" mnemonicParsing="false" onAction="#onLoginButtonClicked" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #732bb5;" text="Login" textFill="WHITE" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.25">
+                     <color>
+                        <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_IN" size="20" tabSize="20" wrappingWidth="22.285714149475098" />
+               </graphic></Button>
+            <FontAwesomeIcon fill="#732bb5" glyphName="USER" layoutX="42.0" layoutY="151.0" size="20" text="" />
+            <FontAwesomeIcon fill="#732bb5" glyphName="LOCK" layoutX="43.0" layoutY="211.0" size="20" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

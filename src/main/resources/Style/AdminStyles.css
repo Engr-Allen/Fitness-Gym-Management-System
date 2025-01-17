@@ -1,0 +1,93 @@
+#searchField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#clearButton { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+.searchButton { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#leftAnchorPane { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#rightAnchorPane { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#totalEarningsField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#earningsAnchorPane { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#monthAnchorPane { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#monthComboBox { -fx-background-radius: 15; -fx-border-radius: 15; -fx-font-family: "Segoe UI Semibold"; -fx-font-size: 10pt; }
+
+#leftAnchorPane1 { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#newNameField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#membershipComboBox { -fx-background-radius: 15; -fx-border-radius: 15; -fx-font-family: "Segoe UI Semibold"; -fx-font-size: 10pt; }
+
+#contactField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#emailAddressField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#paymentMethodComboBoxNew { -fx-background-radius: 15; -fx-border-radius: 15; -fx-font-family: "Segoe UI Semibold"; -fx-font-size: 10pt; }
+
+#newCashierField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#newReferenceField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#confirmButton { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#searchMembershipID { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#fullNameField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#startDateField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#endDateField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#renewalPeriodComboBox { -fx-background-radius: 15; -fx-border-radius: 15; -fx-font-family: "Segoe UI Semibold"; -fx-font-size: 10pt; }
+
+#paymentMethodComboBoxRenew { -fx-background-radius: 15; -fx-border-radius: 15; -fx-font-family: "Segoe UI Semibold"; -fx-font-size: 10pt; }
+
+#renewReferenceField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#renewCashierField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#saveButton { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#searchButton { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#searchMembershipIDField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#fullMembershipNameField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#remainingDaysField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#searchStaffIDField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#fullStaffNameField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#positionField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#dateHiredField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#searchStaffButton { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#clearStaffButton { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+.icon-white { -fx-fill: white; }
+
+#headerHBox { -fx-background-radius: 10; -fx-border-radius: 10; }
+
+#newStaffButton { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#nameField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#emailField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#cancelButton { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#contactNumberField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+.button { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#usernameField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#passwordField { -fx-background-radius: 15; -fx-border-radius: 15; }
