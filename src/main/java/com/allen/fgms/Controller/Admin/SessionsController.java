@@ -67,9 +67,11 @@ public class SessionsController {
     private Button novemberButton;
     @FXML
     private Button decemberButton;
+    @FXML
+    private Button csButton;
 
-    private static final String ENTERED_BUTTON_STYLE = "-fx-background-color: #732bb5; -fx-text-fill: white;";
-    private static final String EXITED_BUTTON_STYLE = "-fx-background-color: white; -fx-border-color: #732bb5;";
+    private static final String ACTIVE_BUTTON_STYLE = "-fx-background-color: #732bb5; -fx-text-fill: white;";
+    private static final String DEFAULT_BUTTON_STYLE = "-fx-background-color: white; -fx-border-color: #732bb5;";
 
     @FXML
     public void initialize() {
@@ -82,33 +84,6 @@ public class SessionsController {
 
         loadSessionsFromDatabase();
         displayCurrentMonthSessions();
-
-        allMonthButton.setOnMouseEntered(e -> allMonthButton.setStyle(ENTERED_BUTTON_STYLE));
-        allMonthButton.setOnMouseExited(e -> allMonthButton.setStyle(EXITED_BUTTON_STYLE));
-        januaryButton.setOnMouseEntered(e -> januaryButton.setStyle(ENTERED_BUTTON_STYLE));
-        januaryButton.setOnMouseExited(e -> januaryButton.setStyle(EXITED_BUTTON_STYLE));
-        februaryButton.setOnMouseEntered(e -> februaryButton.setStyle(ENTERED_BUTTON_STYLE));
-        februaryButton.setOnMouseExited(e -> februaryButton.setStyle(EXITED_BUTTON_STYLE));
-        marchButton.setOnMouseEntered(e -> marchButton.setStyle(ENTERED_BUTTON_STYLE));
-        marchButton.setOnMouseExited(e -> marchButton.setStyle(EXITED_BUTTON_STYLE));
-        aprilButton.setOnMouseEntered(e -> aprilButton.setStyle(ENTERED_BUTTON_STYLE));
-        aprilButton.setOnMouseExited(e -> aprilButton.setStyle(EXITED_BUTTON_STYLE));
-        mayButton.setOnMouseEntered(e -> mayButton.setStyle(ENTERED_BUTTON_STYLE));
-        mayButton.setOnMouseExited(e -> mayButton.setStyle(EXITED_BUTTON_STYLE));
-        juneButton.setOnMouseEntered(e -> juneButton.setStyle(ENTERED_BUTTON_STYLE));
-        juneButton.setOnMouseExited(e -> juneButton.setStyle(EXITED_BUTTON_STYLE));
-        julyButton.setOnMouseEntered(e -> julyButton.setStyle(ENTERED_BUTTON_STYLE));
-        julyButton.setOnMouseExited(e -> julyButton.setStyle(EXITED_BUTTON_STYLE));
-        augustButton.setOnMouseEntered(e -> augustButton.setStyle(ENTERED_BUTTON_STYLE));
-        augustButton.setOnMouseExited(e -> augustButton.setStyle(EXITED_BUTTON_STYLE));
-        septemberButton.setOnMouseEntered(e -> septemberButton.setStyle(ENTERED_BUTTON_STYLE));
-        septemberButton.setOnMouseExited(e -> septemberButton.setStyle(EXITED_BUTTON_STYLE));
-        octoberButton.setOnMouseEntered(e -> octoberButton.setStyle(ENTERED_BUTTON_STYLE));
-        octoberButton.setOnMouseExited(e -> octoberButton.setStyle(EXITED_BUTTON_STYLE));
-        novemberButton.setOnMouseEntered(e -> novemberButton.setStyle(ENTERED_BUTTON_STYLE));
-        novemberButton.setOnMouseExited(e -> novemberButton.setStyle(EXITED_BUTTON_STYLE));
-        decemberButton.setOnMouseEntered(e -> decemberButton.setStyle(ENTERED_BUTTON_STYLE));
-        decemberButton.setOnMouseExited(e -> decemberButton.setStyle(EXITED_BUTTON_STYLE));
 
         allMonthButton.setOnAction(this::handleAllMonthButtonAction);
         januaryButton.setOnAction(this::handleMonthButtonAction);
@@ -123,6 +98,11 @@ public class SessionsController {
         octoberButton.setOnAction(this::handleMonthButtonAction);
         novemberButton.setOnAction(this::handleMonthButtonAction);
         decemberButton.setOnAction(this::handleMonthButtonAction);
+
+        setCurrentMonthButtonStyle();
+
+        csButton.setOnMouseEntered(e -> csButton.setStyle("-fx-background-color: #9145f5;"));
+        csButton.setOnMouseExited(e -> csButton.setStyle("-fx-background-color:  #732bb5;"));
     }
 
     public void loadSessionsFromDatabase() {
@@ -184,6 +164,10 @@ public class SessionsController {
 
     private void handleAllMonthButtonAction(ActionEvent event) {
         sessionsTable.setItems(sessionList);
+
+        resetButtonStyles();
+
+        allMonthButton.setStyle(ACTIVE_BUTTON_STYLE);
     }
 
     private void handleMonthButtonAction(ActionEvent event) {
@@ -201,5 +185,69 @@ public class SessionsController {
         }
 
         sessionsTable.setItems(filteredList);
+
+        resetButtonStyles();
+
+        clickedButton.setStyle(ACTIVE_BUTTON_STYLE);
+    }
+
+    private void resetButtonStyles() {
+        allMonthButton.setStyle(DEFAULT_BUTTON_STYLE);
+        januaryButton.setStyle(DEFAULT_BUTTON_STYLE);
+        februaryButton.setStyle(DEFAULT_BUTTON_STYLE);
+        marchButton.setStyle(DEFAULT_BUTTON_STYLE);
+        aprilButton.setStyle(DEFAULT_BUTTON_STYLE);
+        mayButton.setStyle(DEFAULT_BUTTON_STYLE);
+        juneButton.setStyle(DEFAULT_BUTTON_STYLE);
+        julyButton.setStyle(DEFAULT_BUTTON_STYLE);
+        augustButton.setStyle(DEFAULT_BUTTON_STYLE);
+        septemberButton.setStyle(DEFAULT_BUTTON_STYLE);
+        octoberButton.setStyle(DEFAULT_BUTTON_STYLE);
+        novemberButton.setStyle(DEFAULT_BUTTON_STYLE);
+        decemberButton.setStyle(DEFAULT_BUTTON_STYLE);
+    }
+
+    private void setCurrentMonthButtonStyle() {
+        LocalDate now = LocalDate.now();
+        String currentMonth = now.getMonth().name();
+
+        switch (currentMonth.toLowerCase()) {
+            case "january":
+                januaryButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "february":
+                februaryButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "march":
+                marchButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "april":
+                aprilButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "may":
+                mayButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "june":
+                juneButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "july":
+                julyButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "august":
+                augustButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "september":
+                septemberButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "october":
+                octoberButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "november":
+                novemberButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+            case "december":
+                decemberButton.setStyle(ACTIVE_BUTTON_STYLE);
+                break;
+        }
     }
 }

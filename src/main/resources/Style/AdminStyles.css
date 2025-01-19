@@ -91,3 +91,13 @@
 #usernameField { -fx-background-radius: 15; -fx-border-radius: 15; }
 
 #passwordField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#sessionField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#facilitatorField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#locationField { -fx-background-radius: 15; -fx-border-radius: 15; }
+
+#startTimeComboBox { -fx-background-radius: 15; -fx-border-radius: 15; -fx-font-family: "Segoe UI Semibold"; -fx-font-size: 10pt; }
+
+#endTimeComboBox { -fx-background-radius: 15; -fx-border-radius: 15; -fx-font-family: "Segoe UI Semibold"; -fx-font-size: 10pt; }

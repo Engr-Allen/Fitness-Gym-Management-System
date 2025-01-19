@@ -11,21 +11,21 @@ public class CSController {
 
     @FXML
     private TextField sessionField;
-
     @FXML
     private DatePicker dateField;
 
     @FXML
     private ComboBox<String> startTimeComboBox;
-
     @FXML
     private ComboBox<String> endTimeComboBox;
 
     @FXML
     private TextField facilitatorField;
-
     @FXML
     private TextField locationField;
+
+    @FXML
+    private Button confirmButton;
 
     @FXML
     public void initialize() {
@@ -62,6 +62,15 @@ public class CSController {
                 "8:00 PM",
                 "9:00 PM"
         );
+
+        startTimeComboBox.setOnMouseEntered(e -> startTimeComboBox.setStyle("-fx-background-color: #9145f5;"));
+        startTimeComboBox.setOnMouseExited(e -> startTimeComboBox.setStyle("-fx-border-color: #732bb5; -fx-background-color: white;"));
+
+        endTimeComboBox.setOnMouseEntered(e -> endTimeComboBox.setStyle("-fx-background-color: #9145f5;"));
+        endTimeComboBox.setOnMouseExited(e -> endTimeComboBox.setStyle("-fx-border-color: #732bb5; -fx-background-color: white;"));
+
+        confirmButton.setOnMouseEntered(e -> confirmButton.setStyle("-fx-background-color: #9145f5;"));
+        confirmButton.setOnMouseExited(e -> confirmButton.setStyle("-fx-background-color:  #732bb5;"));
     }
 
     @FXML

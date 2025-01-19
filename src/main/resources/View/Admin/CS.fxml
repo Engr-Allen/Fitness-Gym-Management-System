@@ -1,20 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.allen.fgms.Controller.Admin.CSController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="450.0" stylesheets="@../../Style/AdminStyles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.allen.fgms.Controller.Admin.CSController">
    <children>
-      <TextField fx:id="sessionField" layoutX="131.0" layoutY="67.0" promptText="Session" />
-      <DatePicker fx:id="dateField" layoutX="115.0" layoutY="109.0" promptText="Date" />
-      <ComboBox fx:id="startTimeComboBox" layoutX="130.0" layoutY="154.0" prefWidth="150.0" promptText="Start Time" />
-      <ComboBox fx:id="endTimeComboBox" layoutX="130.0" layoutY="200.0" prefWidth="150.0" promptText="End Time" />
-      <TextField fx:id="facilitatorField" layoutX="129.0" layoutY="245.0" promptText="Facilitator" />
-      <TextField fx:id="locationField" layoutX="129.0" layoutY="284.0" promptText="Location" />
-      <Button layoutX="169.0" layoutY="327.0" mnemonicParsing="false" onAction="#onConfirmedButtonClicked" text="Confirm" />
+      <VBox layoutX="193.0" layoutY="124.0" prefHeight="360.0" prefWidth="181.0" spacing="20.0">
+         <children>
+            <TextField fx:id="sessionField" promptText="Type Session Name" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="dateField" prefHeight="32.0" prefWidth="181.0" promptText="Date" style="-fx-border-color: #732bb5;" />
+            <ComboBox fx:id="startTimeComboBox" prefHeight="32.0" prefWidth="181.0" promptText="Start Time" style="-fx-background-color: white; -fx-border-color: #732bb5;" />
+            <ComboBox fx:id="endTimeComboBox" prefHeight="32.0" prefWidth="181.0" promptText="End Time" style="-fx-background-color: white; -fx-border-color: #732bb5;" />
+            <TextField fx:id="facilitatorField" promptText="Type Facilitator" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="locationField" prefHeight="32.0" prefWidth="181.0" promptText="Type Location" style="-fx-background-color: white; -fx-border-color: #732bb5;">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmedButtonClicked" prefHeight="35.0" prefWidth="216.0" style="-fx-background-color: #732bb5;" text="Confirm" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.25">
+                     <color>
+                        <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CHECK" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="218.0" layoutY="59.0" text="Create a Session">
+         <font>
+            <Font name="Segoe UI Semibold Italic" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8039215803146362" green="0.7686274647712708" blue="0.7686274647712708" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <VBox layoutX="72.0" layoutY="132.0" prefHeight="348.0" prefWidth="121.0" spacing="36.0">
+         <children>
+            <Label text="Session :">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Date :">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Start Time :">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="End Time :">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Facilitator :">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Location :">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label>
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
